@@ -1,82 +1,91 @@
-# case_ifood
-# 🏍️Case Técnico de Data Analysis - iFood 🍕
+# 📊 Case Técnico de Data Analysis - iFood 🏍️🍕
 
-Case técnico, que tem como objetivo desenvolver uma solução baseada em dados para
-direcionar uma estratégia de cupons como alavanca de crescimento.
-Contém tratamento de dados, Notebooks de processamento e análise de dados, instruções de execução e relatorio final com resultados.
+Este é um case técnico de análise de dados com o objetivo de desenvolver uma solução baseada em dados para direcionar uma **estratégia de cupons como alavanca de crescimento** para o iFood.
+
+O projeto inclui:
+
+- Tratamento de dados
+- Notebooks de processamento e análise
+- Instruções de execução
+- Relatório final com os resultados obtidos
 
 ---
 
-## 🛠️ Tecnologias e Bibliotecas
+## 🚀 Tecnologias e Bibliotecas Utilizadas
 
-- Databricks Community
-- Python/PySpark
-- Microsoft PowerPoint
-- requests
-- tqdm
-- pandas
-  
+- ⚙️ [Databricks Community Edition](https://community.cloud.databricks.com/)
+- 🐍 Python / PySpark
+- 📊 Pandas
+- 📈 Matplotlib
+- 🌊 Seaborn
+- 🔢 NumPy
+- 🔗 Requests
+- ⏳ tqdm
+- 🎨 PowerPoint (para apresentação dos resultados)
+
 ---
 
-## 🔧 Instalação de dependências:
+## 📦 Instalação de Dependências
+
+No ambiente Databricks, execute o seguinte comando para instalar as dependências necessárias:
+
 %pip install requests tqdm pandas
 
-- import os
-- import requests
-- import tarfile
-- from pyspark.sql.functions import lit
-- import pandas as pd
-- from tqdm import tqdm
-- from pyspark.sql.functions import col, to_date, to_timestamp,import avg, sum, countDistinct, stddev
-- from pyspark.sql.types import StringType, BooleanType, IntegerType, DoubleType
-- import matplotlib.pyplot as plt
-- import numpy as np
-- import seaborn as sns
-- from pyspark.sql import functions as F
-- from scipy.stats import ttest_ind
-- import matplotlib.ticker as mtick
-- import math
-- from pyspark.sql.functions import sum as spark_sum
+## Além disso, são utilizadas as seguintes bibliotecas:
 
-## Como Executar
-
-Processamento e análise realizados em Python/PySpark e desenvolvido no Databricks Community Edition.
-
-Abra Databricks Community Edition: https://community.cloud.databricks.com/
-
-Faça login
-
-Importe o arquivo .py em File>Import
-
-E com cluster já configurado, pressione Run all.
-
-## Análise dos Dados
-Utilizado função para baixar os arquivos http diretamente na pasta do Databricks.
-
-Funções de extração e leitura atraves do spark.
-
-Tratamento para alteração dos tipos de dados e resolução de nulos.
-
-análise exploratória dos campos existentes nas bases.
-
-cálculo de métricas com gráficos
-
-Verificação Significância Estatística
-
-Viabilidade Financeira
+import os
+import requests
+import tarfile
+from pyspark.sql import functions as F
+from pyspark.sql.functions import (
+    lit, col, to_date, to_timestamp, avg, sum, countDistinct, stddev
+)
+from pyspark.sql.types import StringType, BooleanType, IntegerType, DoubleType
+import pandas as pd
+from tqdm import tqdm
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+from scipy.stats import ttest_ind
+import matplotlib.ticker as mtick
+import math
+from pyspark.sql.functions import sum as spark_sum
 
 
-## Estrutura do Repositório
+## ▶️ Como Executar
+Acesse o Databricks Community Edition.
 
-Notebooks relacionados ao tratamento de dados e analises.
+Faça login na sua conta.
 
-Arquivo do relatorio com resultado em PDF
+Crie e configure um cluster.
 
+Importe o notebook (.py ou .dbc) via File > Import.
 
+Execute todos os comandos utilizando Run All.
 
+## 🔍 Etapas da Análise
 
----
+🔗 Coleta de dados: Download dos arquivos diretamente no Databricks via requisição HTTP.
 
+🧹 Tratamento dos dados: Conversão de tipos, tratamento de valores nulos e preparação das tabelas.
 
+🔎 Análise exploratória: Avaliação dos campos, identificação de padrões e geração de gráficos.
 
+📊 Cálculo de métricas: Análises estatísticas descritivas e gráficas.
 
+🧠 Testes estatísticos: Verificação de significância estatística (ex.: Teste T).
+
+💰 Análise de viabilidade financeira: Avaliação dos impactos financeiros da estratégia proposta.
+
+## 📂 Estrutura do Repositório
+
+📦 case_ifood
+
+├── 📁 notebooks/            # Notebooks de tratamento e análise
+
+├── 📄 relatorio_final_case_ifood.pdf   # Relatório final com os resultados
+
+├── 📄 README.md             # Este arquivo
+
+## 📑 Relatório
+O relatório final (relatorio_final_case_ifood.pdf) apresenta as conclusões, gráficos e recomendações baseadas na análise dos dados.
